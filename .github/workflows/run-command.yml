@@ -1,0 +1,18 @@
+name: Run Burt Command
+
+on:
+  push:
+    paths:
+      - 'command.sh'
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run command from script
+        run: |
+          chmod +x command.sh
+          ./command.sh
