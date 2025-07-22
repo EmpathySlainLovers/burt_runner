@@ -1,1 +1,2 @@
-ls -la > /sdcard/burt_files.txt
+echo "Test run triggered" > burt_status.txt
+
